@@ -47,7 +47,7 @@ namespace ShangSolutionInc.WebAPIExam.Controllers
             {
                 //Validate JWT Token
                 String token = Request.Headers.Authorization;
-                var tokenHandler = new TokenHandler(token);
+                var tokenHandler = new TokenHandler(token);// sample token "Bearer eyJhbGciOiJIUzI1NiJ9.eyJJZGVudGlmaWVyIjoiU1NJIiwiSXNzdWVyIjoiSXNzdWVyIiwiZXhwIjoxNjUwOTYyODUzLCJpYXQiOjE2NTA5NjI4NTN9.36jtUID_Hr0KbkkDy6CeLxu6hUw4JSVejaTE9hG5KHs"
                 bool tokenIsValid = tokenHandler.validate();
 
                 if (!tokenIsValid)

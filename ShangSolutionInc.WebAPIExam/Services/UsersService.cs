@@ -17,9 +17,7 @@ namespace ShangSolutionInc.WebAPIExam.Services
         public UsersService(string client)
         {
             _client = client;
-            //Data Source="localhost, 1433";Initial Catalog=ClientA;User ID=sa
             _connectionStr = string.Format(@"Data Source=""ms-sql-server, 1433"";Initial Catalog=ClientA;User ID=sa;Password=yourStrong(!)Password", _client);
-            //_connectionStr = string.Format("Data Source=DESKTOP-JEPEC86;Initial Catalog={0};Integrated Security=True", _client);
         }
 
         public List<User> GetUsers()
